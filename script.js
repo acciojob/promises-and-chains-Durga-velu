@@ -1,7 +1,7 @@
 //your JS code here. If required.
 let Fname=document.getElementById("name")
 let age=document.getElementById("age")
-let btn=document.getElementBy Id("btn")
+let btn=document.getElementById("btn")
 
 
 btn.addEventListener("click", function(event) {
