@@ -6,6 +6,7 @@ let btn = document.getElementById("btn");
 
 btn.addEventListener("click", function(event) {
     event.preventDefault(); 
+	
 let promise =new Promise((resolve,reject)=>{
 
 	setTimeout(()=>{
