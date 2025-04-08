@@ -15,7 +15,7 @@ let promise =new Promise((resolve,reject)=>{
 				 resolve(`Welcome ${Fname.value}, You can vote`);
 			 }
 			else{
-				reject(`Oh sorry ${Fname.value}. You aren't old enough`)
+				reject(`Oh sorry. ${Fname.value}. You aren't old enough`)
 			}
 		}
 		else{
