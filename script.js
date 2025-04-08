@@ -12,10 +12,10 @@ let promise =new Promise((resolve,reject)=>{
 	setTimeout(()=>{
 		if( Fname.value !== "" && age.value !== ""){
 			 if(parseInt(age.value)>=18){
-				 resolve(`Welcome, ${Fname.value}. You can vote`);
+				 resolve(`Welcome, ${Fname.value}. You can vote.`);
 			 }
 			else{
-				reject(`Oh sorry ${Fname.value}. You aren't old enough`)
+				reject(`Oh sorry ${Fname.value}. You aren't old enough.`)
 			}
 		}
 		else{
