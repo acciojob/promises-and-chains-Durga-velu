@@ -1,27 +1,33 @@
 //your JS code here. If required.
 let Fname=document.getElementById("name")
 let age=document.getElementById("age")
+let btn=document.getElementBy Id("btn")
 
-let promise =new promise((resolve,reject)=>{
+
+btn.addEventListener("click", function(event) {
+    event.preventDefault(); 
+let promise =new Promise((resolve,reject)=>{
 
 	setTimeout(()=>{
-		resolve(if( Fname.value !== "" && age.value !== ""){
-			 if(age>=18){
-				 `Welcome ${Fname.vale}, You can vote`
+		if( Fname.value !== "" && age.value !== ""){
+			 if(parseInt(age.value)>=18){
+				 resolve(`Welcome ${Fname.vale}, You can vote`)
 			 }
 			else{
-				`Oh sorry ${Fname.value}. You aren't old enough`
+				reject(`Oh sorry ${Fname.value}. You aren't old enough`)
 			}
 		}
 		else{
-			`Please enter valid details.`
-		})
-	})
-},4000)
+			reject(`Please enter valid details.`)
+		}
+	},4000)
+});
 
-promise.then((resolve)=>{
+promise.then((message)=>{
 
-	alert(resolve)
-}).catch((reject)=>{
-	alert reject
-})
+	alert(message)
+}).catch((error)=>{
+	alert (error)
+});
+
+});
